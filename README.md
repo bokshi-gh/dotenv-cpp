@@ -6,5 +6,5 @@ A lightweight, header-only C++ library that allows you to load environment varia
 
 Check the following files:
 
-- `include/dotenv.hpp` - Namespace and fucction implementations.
+- `include/dotenv.hpp` - Namespace and function implementations.
 - `src/main.cpp` - Example code demonstrating how to use the library.
