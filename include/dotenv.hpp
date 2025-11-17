@@ -6,16 +6,17 @@
 #include <unordered_map>
 #include <cstdlib>
 
-namespace dotenv {
-
-    static std::unordered_map<std::string, std::string> envmap;
+namespace {
+    std::unordered_map<std::string, std::string> envmap;
 
     inline std::string trim(std::string s) {
         s.erase(0, s.find_first_not_of(" \t\r\n"));
         s.erase(s.find_last_not_of(" \t\r\n") + 1);
         return s;
     }
+}
 
+namespace dotenv {
     inline void init(const char* path = nullptr) {
         const char* filepath = path ? path : "./.env";
 
