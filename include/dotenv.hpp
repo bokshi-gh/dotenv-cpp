@@ -44,9 +44,9 @@ namespace dotenv {
     inline std::string getenv(const std::string& key) {
         if (envmap.find(key) != envmap.end())
             return envmap[key];
-        else
+        else {
             std::cerr << "FATAL: Environment variable '" << key << "' not found!" << "\n";
             std::exit(EXIT_FAILURE);
-        return "";
+        }
     }
 }
